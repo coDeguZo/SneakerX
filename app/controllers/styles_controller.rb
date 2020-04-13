@@ -1,0 +1,15 @@
+class StylesController < ApplicationController
+
+
+
+
+
+
+
+
+
+
+
+
+
+end

@@ -1,0 +1,9 @@
+<h1>All The Products </h1>
+
+<ul>
+<% @products.each do |product|%>
+
+<li><%= link_to "$#{product.price.to_f}", product_path(product.id)%></li>
+
+<%end%>
+</ul>

@@ -1,0 +1,17 @@
+
+<h1> <%= @product.style.name %> </h1>
+
+<h3> <%= @product.price %></h3>
+
+
+<%= form_for @product do |f| %>
+    <div>
+    <%= f.label :size %>
+    <%= f.collection_select :size, Product.all, :id, :size %>
+    </div>
+
+    <div>
+    <%= f.submit %>
+    </div>
+
+<% end %>
