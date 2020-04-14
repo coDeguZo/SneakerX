@@ -1,0 +1,29 @@
+
+<div class="login-box">
+<h1> Login </h1>
+
+<a class="error">
+    <%= flash["error"] %>
+</a>
+
+    <div class="textbox">
+<%= form_tag login_path do %>
+    </div>
+
+<div class="textbox">
+    <%= label :name, "Username" %>
+    <%= text_field_tag :name %>
+    </div>
+
+    <div class="textbox">
+     <%= label :password, "Password" %>
+     <%= password_field_tag :password %>
+     </div> 
+
+
+    <div class="textbox">
+    <%= submit_tag "Login" %>
+    </div>
+<% end %>
+</div>
+</section>

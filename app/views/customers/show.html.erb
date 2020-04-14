@@ -1,12 +1,30 @@
 <h1> Customer Profile Page </h1>
+<br/>
+<br/>
 
 
 <ul>
-<li class = "name"> <%= @customer.name %> </li>
-<li class = "address"> <%= @customer.address %> </li>
+<h3> Name: <li class = "name"> <%= @customer.name %> </li> </h3>
+<h3>Address: <li class = "address"> <%= @customer.address %> </li></h3>
 </ul>
+<br/>
+
+<h1>Inventory of Shoes</h1>
+
+<% @customer.styles.each do |style_instance| %>
+    <img src= "<%= style_instance.img_url %>" style="width: 350px">
+    <li><%= style_instance.name %></li>
+<% end %>
+
+
+
+<br/>
+<br/>
 
 <div>
-<%= link_to "Change Customer Name", edit_customer_path %>
+<%= link_to "Add Shoes To Sell", new_product_path %>
 </div>
 
+<div>
+<%= link_to "Change Customer Information", edit_customer_path %>
+</div>

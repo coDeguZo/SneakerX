@@ -1,0 +1,28 @@
+<h1> Add Product To Sell</h1>
+
+<%= render partial: "shared/error_list", locals: {new_object: @product} %>
+
+<%= form_for @product do |f| %>
+    <div>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+    </div>
+
+    <div>
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+    </div>
+
+    <div>
+    <%= f.label :customer_id, "List of Sellers" %>
+    <%= f.collection_select :customer_id, Customer.all, :id, :name, include_blank: true%>
+    </div>
+
+    <div>
+    <%= f.label :style_id %>
+    <%= f.coll :style_id %>
+    </div>
+
+    <%= f.submit %>
+
+<% end %>

@@ -10,17 +10,17 @@ Customer.destroy_all
 Style.destroy_all
 Product.destroy_all
 
-drake = Customer.create(name: "Drake", address: "1127 Peach Tree NE Toronto, CA 20378")
-chine = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-bret = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-beza = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-uzo = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-sam = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-chris= Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-charlie = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-lindsay = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-dawit = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
-captain = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC")
+drake = Customer.create(name: "Drake", address: "1127 Peach Tree NE Toronto, CA 20378", password: "drake")
+chine = Customer.create(name: "Chine", address: "20293 Fox Charlie Lane Washington, DC", password: "chine")
+bret = Customer.create(name: "Bret", address: "3928 Fox Lane Washington, DC", password: "bret")
+beza = Customer.create(name: "Beza", address: "2039 West Fox Lane Washington, DC", password: "beza")
+uzo = Customer.create(name: "Uzo", address: "8493 Cherry Hill Los Angeles, CA", password: "uzo") 
+sam = Customer.create(name: "Sam", address: "11304 Manafort Dr. Washington, DC", password: "sam")
+chris= Customer.create(name: "Chris", address: "47622 Kentucky Hill Chicago, IL", password: "chris")
+charlie = Customer.create(name: "Charlie", address: "90210 Beverly Hills, CA", password: "charlie")
+lindsay = Customer.create(name: "Lindsay", address: "03928 14th St. NW, Washington, DC", password: "lindsay")
+dawit = Customer.create(name: "Dawit", address: "20293 Fox Charlie Lane Washington, DC", password: "dawit")
+captain = Customer.create(name: "Captain", address: "1400 14th st washington, DC", password: "captain")
 
 
 jordans1 = Style.create(name: "Jordan 1 Royal Blue", img_url: "https://stockx.imgix.net/Air-Jordan-1-Retro-Black-Blue-2001-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1555964970&w=1000")

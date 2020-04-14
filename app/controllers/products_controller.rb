@@ -7,8 +7,21 @@ class ProductsController < ApplicationController
     end
     
     def show
+    end
 
-    end 
+    def new
+        @product = Product.new
+    end
+
+    def create
+        @product = Product.new(product_params)
+        if @product.valid?
+            @product.save
+            redirect_to product_path(@product.customer)
+        else
+            render :new
+        end
+    end
 
     private
 
@@ -16,5 +29,8 @@ class ProductsController < ApplicationController
         @product = Product.find(params[:id])
     end
 
+    def product_params
+        params.require(:product).permit(:price, :size, :customer_id, :style_id)
+    end
     
 end

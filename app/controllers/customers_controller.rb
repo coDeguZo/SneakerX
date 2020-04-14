@@ -14,8 +14,13 @@ class CustomersController < ApplicationController
 
     def create
         @customer = Customer.new(customer_params)
-        @customer.save
-        redirect_to customer_path(@customer)
+        if @customer.valid?
+            @customer.save
+            session[:customer_id] = @customer.id
+            redirect_to products_path
+        else
+            render :new
+        end
     end
 
     def edit
@@ -39,7 +44,7 @@ class CustomersController < ApplicationController
     end
 
     def customer_params
-        params.require(:customer).permit(:name, :address)
+        params.require(:customer).permit(:name, :address, :password)
     end
 
 
