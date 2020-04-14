@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_13_181815) do
+ActiveRecord::Schema.define(version: 2020_04_14_025450) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_04_13_181815) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "img_url", default: "https://stockx-360.imgix.net/adidas-Yeezy-Boost-350-V2-Cinder/Images/adidas-Yeezy-Boost-350-V2-Cinder/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1585357645&w=1000"
   end
 
 end

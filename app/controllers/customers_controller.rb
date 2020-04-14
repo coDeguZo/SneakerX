@@ -29,7 +29,7 @@ class CustomersController < ApplicationController
     end
 
     def destroy
-        @customer = 
+        @customer
     end
 
     private

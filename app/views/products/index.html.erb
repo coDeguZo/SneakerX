@@ -1,9 +1,18 @@
-<h1>All The Products </h1>
 
+<div class="header">
+    <h1>All The Products </h1>
+</div>
+
+<br/>
+
+
+<div>
 <ul>
-<% @products.each do |product|%>
-
-<li><%= link_to "$#{product.price.to_f}", product_path(product.id)%></li>
-
-<%end%>
+    <% @products.each do |product| %>
+    <div style= "display: inline-grid; " >
+        <img src= "<%= product.style.img_url %>" style="width: 400px">
+        <li><%= link_to product.style.name, product_path(product.id)%></li>
+    </div>
+    <%end%>
 </ul>
+</div>

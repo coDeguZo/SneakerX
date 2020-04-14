@@ -1,17 +1,25 @@
 
 <h1> <%= @product.style.name %> </h1>
 
-<h3> <%= @product.price %></h3>
+<div class="image">
+    <%= image_tag(@product.style.img_url, data_zoom_image: @product.style.img_url) %>
+</div>
+
+
+
+<h3> <%= "$#{@product.price}" %></h3>
+
 
 
 <%= form_for @product do |f| %>
     <div>
     <%= f.label :size %>
-    <%= f.collection_select :size, Product.all, :id, :size %>
-    </div>
+    <%= f.select :size, (3..16) %>
+    </div><br/>
 
     <div>
     <%= f.submit %>
+
     </div>
 
 <% end %>
