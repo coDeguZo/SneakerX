@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+    helper_method :cart
 
     def login
         #loads the login view GET
@@ -23,27 +24,19 @@ class SessionsController < ApplicationController
         redirect_to login_path
     end
 
-    #-----------------------------------------------------------------#
+    def cart
+        session[:cart] ||= []
+    end
 
-    # def signup
-    #     @customer = Customer.new
-    # end
+    def add_to_cart
+        id = params[:id].to_i 
+        session[:cart] << id unless session[:cart].include?(id)
+        redirect_to cart_path
+    end
 
-    # def create
-    #     @customer = Customer.new(customer_params)
-    #     if @customer && @customer.authenticate(params[:customer][:password])
-    #         session[:customer_id] = @customer.id
-    #         redirect_to customer_path(@customer)
-    #     else
-    #         redirect_to new_session_path
-    #     end
-    # end
-
-
-    # private
-
-    # def customer_params
-    #     params.require(:customer).permit(:name, :address, :password)
-    # end
+    def remove_from_cart
+        id = params[:id].to_i
+        session[:cart].delete[:id]
+    end
 
 end

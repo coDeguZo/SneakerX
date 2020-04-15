@@ -31,13 +31,12 @@
             <% else %>
               <li class="fas fa-id-card-alt"> <%= link_to "Profile", customer_path(current_customer.id) %> </li>
             <% end %>
-            <li><a class="fas fa-user-plus" href="/customers/new"> Signup</a></li>
             <% if current_customer == nil %>
+              <li><a class="fas fa-user-plus" href="/customers/new"> Signup</a></li>
               <li><a class="fa fa-user" aria-hidden="true" href="/login"> Login</a></li>
             <% else %>
               <li class="fas fa-sign-out-alt"> <%= link_to "Logout", logout_path %></li>
             <% end %>
-           
     </ul>
 </nav>
 <section></section>
@@ -46,11 +45,11 @@
 
     <div style="margin: 60px">
 
-    <div>
+        <div>
      <% if session[:customer_id].nil? %>
         <div> <% link_to "Login", login_path %> </div>
      <% else %>
-        <div style="text-align: right; padding-top: -20x;"> Welcome to our website, <%= current_customer.name %> </div>
+        <div style="text-align: right; padding-top: -20x;"><%= link_to "Shopping Cart", cart_path%> </div>
         <% end %>
     </div>
 
@@ -61,7 +60,4 @@
  </div>
  </div>
  </div>
- <footer class="footer">
- <p>SneakerX &copy; 2020, All Right Reserved</p></footer>
-</body>
 </html> 

@@ -14,13 +14,8 @@
     </div>
 
     <div>
-    <%= f.label :customer_id, "List of Sellers" %>
-    <%= f.collection_select :customer_id, Customer.all, :id, :name, include_blank: true%>
-    </div>
-
-    <div>
     <%= f.label :style_id %>
-    <%= f.coll :style_id %>
+    <%= f.collection_select :style_id, Style.all, :id, :name %>
     </div>
 
     <%= f.submit %>

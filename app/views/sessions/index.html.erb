@@ -1,0 +1,22 @@
+<details>
+<summary>Shopping Cart</summary>
+<ul>
+<%@cart.each do |products| %>
+<li><%product.name %></li>
+
+</ul>
+</details>
+
+<% @products.each do |product|%>
+<h1><%= product.name%></h1>
+<% if product.image.present?%>
+<p><%= image_tag product.image.variant(resize_to_limit: [100, 100]).processed %></p>
+<% end %>
+<p>Price: <%= number_to_currency product.price %></p>
+<p><%= product.size%></p>
+<% if @cart.include?(product)%>
+<p><%= bottun_to 'remove from cart',%></p>
+<% else %>
+<p><%= link_to 'add to cart', add_to_cart_path(product.id), method: :post%></p>
+  <%end%>
+   <%end%>

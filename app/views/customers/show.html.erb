@@ -1,21 +1,26 @@
-<h1> Customer Profile Page </h1>
+<h1 style="text-align: center"> Profile Page </h1>
 <br/>
 <br/>
 
+
+
+<h3> Name: <a class = "name"> <%= @customer.name %> </a></h3>
+<h3>Address: <a class = "address"> <%= @customer.address %> </a></h3>
+
+<br/>
+
+<h1 style="text-align: center">Inventory of Shoes</h1>
 
 <ul>
-<h3> Name: <li class = "name"> <%= @customer.name %> </li> </h3>
-<h3>Address: <li class = "address"> <%= @customer.address %> </li></h3>
-</ul>
-<br/>
-
-<h1>Inventory of Shoes</h1>
-
-<% @customer.styles.each do |style_instance| %>
-    <img src= "<%= style_instance.img_url %>" style="width: 350px">
-    <li><%= style_instance.name %></li>
+<% @customer.products.each do |product| %>
+    <div style= "display: inline-grid">
+    <img src= "<%= product.style.img_url %>" style="width: 350px">    
+    <li><%= product.style.name %></li>
+    <li><%= product.size %></li>
+    <li><%= "$#{product.price}" %></li>
+    </div>
 <% end %>
-
+</ul>
 
 
 <br/>

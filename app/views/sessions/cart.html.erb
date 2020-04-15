@@ -1,0 +1,16 @@
+<h1 style="text-align: center; color: red;" >Shopping Cart</h1>
+
+<ul>
+<% current_customer.products.each do |product| %>
+  <div style= "display: inline-grid">
+    <li> <img src= "<%= product.style.img_url %>" style="width: 400px;"></li>
+    <li>Price: <%= product.price %></li>
+    <li>Product Size: <%= product.size %></li>
+  </div>
+<% end %>
+</ul>
+
+<br/>
+<br/>
+
+<h1> Total For Transaction :</h1>
