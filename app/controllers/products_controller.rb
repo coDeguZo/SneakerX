@@ -29,10 +29,11 @@ class ProductsController < ApplicationController
         @product = Product.find(params[:id])
         if logged_in?
             cart << @product.id unless cart.include?(@product.id)
-            flash[:add_to_cart] = "#{@product.style.name} has been added to you cart"
+            flash[:add_to_cart] = "#{@product.style.name} added to you cart!"
             redirect_to my_cart_path(current_customer)
         else
-            flash[:not_logged_in] = "blehhhh"
+            flash[:not_logged_in] = "Please Sign in to add to cart!"
+            redirect_to login_path
         end
     end
 

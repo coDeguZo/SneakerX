@@ -2,6 +2,9 @@
 <br/>
 <br/>
 
+<% if flash[:notice] %>
+    <div class="notice" style="text-align: center; color: red;"><%= flash[:notice] %></div>
+<% end %>
 
 
 <h3> Name: <a class = "name"> <%= @customer.name %> </a></h3>
@@ -22,6 +25,23 @@
 <% end %>
 </ul>
 
+
+<br/>
+<br/>
+
+<h1 style="text-align: center"> Previous Purchases </h1>
+
+<% purchases = [] %>
+<% cart.each do |product|%>
+  <% p = Product.find(product) %>
+  <div style= "display: inline-grid">
+    <li> <img src= "<% p.style.img_url %>" style="width: 400px;"></li>
+    <li><% purchases << p.style.name %></li>
+         <% p.size %> 
+  </div>
+<% end %>
+
+<%= purchases %>
 
 <br/>
 <br/>

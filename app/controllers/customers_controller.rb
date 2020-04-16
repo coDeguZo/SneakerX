@@ -32,7 +32,7 @@ class CustomersController < ApplicationController
 
     def process_checkout
         cart.clear
-        flash["Order Completed"] = "You must be logged in"
+        flash[:notice] = "Order Completed"
         redirect_to current_customer
     end
 

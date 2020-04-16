@@ -1,5 +1,7 @@
 <div id="cool">
-    <div id="signup">               
+
+
+    <form class="box" action="new.html" method="post">             
                    
                     <h1>  Sign Up Today! </h1>
 
@@ -7,28 +9,30 @@
 
                     <ul>
                     <%= form_for @customer do |f| %>
+                     </li>
 
-                        <div>
+<%# ====================================================== %>
+                        <li>
                         <%= f.label :name %>
-                        <%= f.text_field :name %>
-                        </div>
+                        <%= f.text_field :name %> 
+                        </li>
 
-                        <div>
+                        <li>
                         <%= f.label :address %>
                         <%= f.text_field :address %>
-                        </div>
+                        </li>
 
-                        <div>
+                        <li>
                         <%= f.label :password %>
                         <%= f.password_field :password %>
-                        </div>
+                        </li>
 
-                        <div>
+                        <li>
                         <%= f.submit "Create Profile" %>
-                        </div>
+                        </li>
                     <% end %>
 
                     </ul>
-
-    <div>
-</div>
+<%# =============================================== %>
+    </form>
+</>

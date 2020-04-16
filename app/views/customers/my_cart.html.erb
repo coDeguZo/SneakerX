@@ -1,5 +1,12 @@
 <h1 style="text-align: center; color: red;" >Shopping Cart</h1>
 
+<% if flash[:add_to_cart] %>
+    <div class="notice" style="color: red;"><%= flash[:add_to_cart] %></div>
+<% end %>
+
+<% if flash[:remove_from_cart] %>
+    <div class="notice" style="color: red;"><%= flash[:remove_from_cart] %></div>
+<% end %>
 
 <br/>
 <br/>
