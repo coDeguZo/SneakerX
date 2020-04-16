@@ -23,6 +23,10 @@ class CustomersController < ApplicationController
         end
     end
 
+    def my_cart
+        
+    end
+
     def edit
         @customer = Customer.find(params[:id])
     end

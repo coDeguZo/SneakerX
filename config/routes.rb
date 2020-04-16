@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#process_login"
   get '/logout', to: "sessions#logout"
   get '/signup', to: "sessions#signup"
-  get '/cart', to: 'sessions#cart'
-delete 'products/remove_from_cart/:id', to: 'products#remove_from-cart', as: 'remove_from_cart'
+  get 'customers/:id/my_cart', to: "customers#my_cart", as: 'my_cart'
+  get '/products/:id/add_to_cart', to: 'products#add_to_cart', as: 'add_cart'
+  post '/products/:id/add_to_cart', to: 'products#add_to_cart', as: 'add_to_cart'
+  get '/products/:id/remove_from_cart', to: 'products#remove_from_cart', as: 'remove_cart'
+  post '/products/:id/remove_from_cart', to: 'products#remove_from_cart', as: 'remove_from_cart'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

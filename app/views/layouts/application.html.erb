@@ -35,6 +35,7 @@
               <li><a class="fas fa-user-plus" href="/customers/new"> Signup</a></li>
               <li><a class="fa fa-user" aria-hidden="true" href="/login"> Login</a></li>
             <% else %>
+              <li class="fa fa-shopping-cart" aria-hidden="true"><%= link_to "Shopping Cart", my_cart_path(current_customer)%></li>
               <li class="fas fa-sign-out-alt"> <%= link_to "Logout", logout_path %></li>
             <% end %>
     </ul>
@@ -49,7 +50,7 @@
      <% if session[:customer_id].nil? %>
         <div> <% link_to "Login", login_path %> </div>
      <% else %>
-        <div style="text-align: right; padding-top: -20x;"><%= link_to "Shopping Cart", cart_path%> </div>
+        <div style="text-align: right; padding-top: -20x;"><%= link_to "Shopping Cart", my_cart_path(current_customer)%> </div>
         <% end %>
     </div>
 

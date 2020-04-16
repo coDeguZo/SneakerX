@@ -24,16 +24,30 @@ class ProductsController < ApplicationController
         end
     end
 
-    # def add_to_cart
-    #     id = params[:id].to_i 
-    #     session[:cart] << id unless session[:cart].include?(id)
-    #     redirect_to cart_path
-    # end
+    def add_to_cart
+        #Grab the item
+        @product = Product.find(params[:id])
+        if logged_in?
+            cart << @product.id unless cart.include?(@product.id)
+            flash[:add_to_cart] = "#{@product.style.name} has been added to you cart"
+            redirect_to my_cart_path(current_customer)
+            else
+                flash[:not_logged_in] = "blehhhh"
+        end
+    end
 
-    # def remove_from_cart
-    #     id = params[:id].to_i
-    #     session[:cart].delete[:id]
-    # end
+    def remove_from_cart
+        id = params[:id].to_i
+        index = 0
+        while index < cart.length do
+            if cart[index] == id
+                cart.delete_at(index)
+            end
+            index += 1
+        end
+        flash[:remove_from_cart] = "Item removed from cart!"
+        redirect_to my_cart_path(current_customer)
+    end
 
     private
 

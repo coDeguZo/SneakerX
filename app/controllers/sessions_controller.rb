@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-    helper_method :cart
 
     def login
         #loads the login view GET
@@ -23,20 +22,5 @@ class SessionsController < ApplicationController
         session.clear[:customer_id]
         redirect_to login_path
     end
-
-    def cart
-        session[:cart] ||= []
-    end
-
-    def add_to_cart
-        id = params[:id].to_i 
-        session[:cart] << id unless session[:cart].include?(id)
-        redirect_to cart_path
-    end
-
-    def remove_from_cart
-        id = params[:id].to_i
-        session[:cart].delete[:id]
-    end
-
+    
 end
