@@ -22,5 +22,4 @@ class SessionsController < ApplicationController
         session.clear[:customer_id]
         redirect_to login_path
     end
-    
 end

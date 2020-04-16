@@ -1,25 +1,34 @@
-<h1>  Sign Up Today! </h1>
+<div id="cool">
+    <div id="signup">               
+                   
+                    <h1>  Sign Up Today! </h1>
 
-<%= render partial: "shared/error_list", locals: {new_object: @customer} %>
+                    <%= render partial: "shared/error_list", locals: {new_object: @customer} %>
 
-<ul>
-<%= form_for @customer do |f| %>
-    <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    </div>
-    <div>
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-    </div>
-    <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    </div>
+                    <ul>
+                    <%= form_for @customer do |f| %>
+
+                        <div>
+                        <%= f.label :name %>
+                        <%= f.text_field :name %>
+                        </div>
+
+                        <div>
+                        <%= f.label :address %>
+                        <%= f.text_field :address %>
+                        </div>
+
+                        <div>
+                        <%= f.label :password %>
+                        <%= f.password_field :password %>
+                        </div>
+
+                        <div>
+                        <%= f.submit "Create Profile" %>
+                        </div>
+                    <% end %>
+
+                    </ul>
 
     <div>
-    <%= f.submit "Create Profile" %>
-    </div>
-<% end %>
-
-</ul>
+</div>

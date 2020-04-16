@@ -31,8 +31,8 @@ class ProductsController < ApplicationController
             cart << @product.id unless cart.include?(@product.id)
             flash[:add_to_cart] = "#{@product.style.name} has been added to you cart"
             redirect_to my_cart_path(current_customer)
-            else
-                flash[:not_logged_in] = "blehhhh"
+        else
+            flash[:not_logged_in] = "blehhhh"
         end
     end
 

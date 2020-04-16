@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   post '/products/:id/add_to_cart', to: 'products#add_to_cart', as: 'add_to_cart'
   get '/products/:id/remove_from_cart', to: 'products#remove_from_cart', as: 'remove_cart'
   post '/products/:id/remove_from_cart', to: 'products#remove_from_cart', as: 'remove_from_cart'
+  get '/checkout', to: 'customers#checkout', as: 'checkout'
+  post '/checkout', to: 'customers#process_checkout'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

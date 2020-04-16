@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-    before_action :customer_find, only: [:show]
+    before_action :customer_find, only: [:show, :edit, :update]
 
     def index 
         @customers = Customer.all
@@ -24,17 +24,28 @@ class CustomersController < ApplicationController
     end
 
     def my_cart
-        
+    end
+
+    def checkout
+        "Checkout Complete"
+    end
+
+    def process_checkout
+        cart.clear
+        flash["Order Completed"] = "You must be logged in"
+        redirect_to current_customer
     end
 
     def edit
-        @customer = Customer.find(params[:id])
     end
 
     def update
-        @customer = Customer.find(params[:id])
-        @customer.update(customer_params)
-        redirect_to customer_path(@customer)
+        if @customer.valid?
+            @customer.update(customer_params)
+            redirect_to customer_path(@customer)
+        else
+            render :edit
+        end
     end
 
     def destroy

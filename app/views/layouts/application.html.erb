@@ -11,54 +11,57 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </head>
+<%# =============================================================================== %>
 <body>
-<%# ================================================================================================================ %>
-<nav>
 
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars"></i>
-    
-    
-   
-    </label>
+<%# <li id="container"> %>
 
-    <label class="logo" href="/products">SneakerX 💥</label>
-    <ul>
-            <li><a class="fa fa-home" aria-hidden="true" href="/products"> Home</a></li>
-            <% if current_customer == nil %>
-              <% link_to "Profile", login_path %>
-            <% else %>
-              <li class="fas fa-id-card-alt"> <%= link_to "Profile", customer_path(current_customer.id) %> </li>
-            <% end %>
-            <% if current_customer == nil %>
-              <li><a class="fas fa-user-plus" href="/customers/new"> Signup</a></li>
-              <li><a class="fa fa-user" aria-hidden="true" href="/login"> Login</a></li>
-            <% else %>
-              <li class="fa fa-shopping-cart" aria-hidden="true"><%= link_to "Shopping Cart", my_cart_path(current_customer)%></li>
-              <li class="fas fa-sign-out-alt"> <%= link_to "Logout", logout_path %></li>
-            <% end %>
-    </ul>
-</nav>
-<section></section>
-<%# ====================================================================================================================== %>
-    
+<div id="container">
+            <div id="main">
 
-    <div style="margin: 60px">
+                <nav>
 
-        <div>
-     <% if session[:customer_id].nil? %>
-        <div> <% link_to "Login", login_path %> </div>
-     <% else %>
-        <div style="text-align: right; padding-top: -20x;"><%= link_to "Shopping Cart", my_cart_path(current_customer)%> </div>
-        <% end %>
-    </div>
+                  <input type="checkbox" id="check">
+                  <label for="check" class="checkbtn">
+                  <i class="fas fa-bars"></i>
 
-    <%= yield %>
-    <!-- <%# <insert "set :views, 'app/views/students/show.erb> %> -->
-    
+                  </label> 
+                
 
- </div>
- </div>
- </div>
+                  <label class="logo" href="/products">SneakerX 💥</label>
+                    <ul>
+                          <li><a class="fa fa-home" aria-hidden="true" href="/products"> Home</a></li>
+                          <% if current_customer == nil %>
+                            <% link_to "Profile", login_path %>
+                          <% else %>
+                            <li class="fas fa-id-card-alt"> <%= link_to "Profile", customer_path(current_customer.id) %> </li>
+                          <% end %>
+                          <% if current_customer == nil %>
+                            <li><a class="fas fa-user-plus" href="/customers/new"> Signup</a></li>
+                            <li><a class="fa fa-user" aria-hidden="true" href="/login"> Login</a></li>
+                          <% else %>
+                            <li class="fa fa-shopping-cart" aria-hidden="true"><%= link_to "Shopping Cart", my_cart_path(current_customer)%></li>
+                            <li class="fas fa-sign-out-alt"> <%= link_to "Logout", logout_path %></li>
+                          <% end %>
+                    </ul>
+                </nav>
+
+
+                
+
+                  <div style="margin: 60px"> 
+
+                  <%= yield %>
+                </div>
+
+            </div>
+</div>
+
+ </body>
+ <%# ================================================================================= %>
+
+
+ <footer class="footer">
+<p>SneakerX &copy; 2020, All Rights Reserved</p></footer> 
+ 
 </html> 

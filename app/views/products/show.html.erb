@@ -5,19 +5,17 @@
     <%= image_tag(@product.style.img_url) %>
 </div>
 
-<h3> <%= "$#{@product.price}" %></h3>
+<h3> Price: <%= "$#{@product.price}" %></h3>
 
 <br />
 
-<%= form_tag my_cart_path do %>
-    <%= hidden_field_tag :product, @product.id%>
-    <%= label_tag :size, "Size #{@product.size}" %>
-    <div><%= submit_tag "Add To Cart" %></div>
-<% end %>
 
+<div> <%= "Size #{@product.size}" %> </div>
 
+<div>
 <% if logged_in? %>
     <%= link_to "Add To Cart", add_to_cart_path(@product), :method => :post %>
 <% else %>
     <%= link_to "Please Sign In To Add To Cart", login_path %>
 <% end %>
+</div>

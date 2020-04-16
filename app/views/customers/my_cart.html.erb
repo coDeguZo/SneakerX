@@ -12,15 +12,27 @@
     <li><%= p.style.name %></li>
     <li> <%= p.size %> </li>
     <li> <%= "$#{p.price}" %> </li>
+    <li> Quantity: 1</li>
     <li>  <%= link_to "Remove From Cart", remove_from_cart_path(p), :method => :post %> </li>
   </div>
 
 <% end %>
 </ul>
 
-
 <br/>
 <br/>
 
+<h1> Transaction Amount: </h1>
+<br />
 
-<h1> Total For Transaction :</h1>
+<% total = 0 %>
+<% cart.each do |product| %>
+  <% p = Product.find(product) %>
+  <% total += p.price %>
+<% end %>
+
+<h2> Total Price: <%= "$#{total}" %></h2>
+
+<br/>
+
+<div><%= link_to "Proceed To Checkout", checkout_path %></div>

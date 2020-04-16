@@ -1,8 +1,10 @@
-
+html{
+height: 100%;
+}
 
  *{padding:0; margin: 0; text-decoration: none; list-style: none; box-sizing: border-box;}
 
-body{font-family: montserrat;}
+body{font-family: montserrat; height: 100%}
  
 nav{background: #0082e6; height:80px; width: 100%}
 label.logo{color: white; font-size: 35px; line-height: 80px; padding: 0 100px; font-weight: bold;}
@@ -46,6 +48,12 @@ a.active,a:hover{background: #1b9bff; transition: .5s;}
     float: left;
     text-align: center;
 } */ 
+.signup{overflow: auto; padding-bottom: 100px; text-align: center;}
+
+#container{ min-height: 100%;}
+#main{ overflow: auto; padding-bottom: 100px; height: 2000px;}
+#signup{display: flex; flex-direction: column; min-height: 100%,}
+/* overflow: auto; padding-bottom: 100px; height: auto; */
 
 .footer{
     text-align: center; 
@@ -55,9 +63,15 @@ a.active,a:hover{background: #1b9bff; transition: .5s;}
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 3.0rem;
+    position: relative;
+    height: 100px;
+    margin-top: auto;
+    clear: both;
             
-}
+} 
+
+
+
 
 
 
