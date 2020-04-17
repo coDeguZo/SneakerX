@@ -43,8 +43,9 @@
 <br/>
 <br/>
 
-<h1 style="text-align: center; color: red;" > Shipping information </h1>
+<h1 style="text-align: center; color: red;" > Shipping information </div>
 
+<div style="text-align: center;">
 <%= form_tag checkout_path do %>
     <div>
     <%= label :name, "Name" %>
@@ -55,7 +56,7 @@
     <%= text_field_tag :address %>
     </div>
     <div>
-    <%= label :credit_card, "Credit Card Information" %>
+    <%= label :credit_card_info, "Payment Info" %>
     <%= text_field_tag :credit_card %>
     </div>
 
@@ -63,3 +64,4 @@
     <%= submit_tag "Process Checkout", data: {confirm: "Are you sure?"} %>
     </div> 
 <% end %>
+</div>
