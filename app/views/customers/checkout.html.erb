@@ -24,6 +24,25 @@
 <br/>
 <br/>
 
+<h1> Transaction Amount: </h1>
+<br />
+
+<% total = 0 %>
+<% cart.each do |product| %>
+  <% p = Product.find(product) %>
+  <% total += p.price %>
+<% end %>
+
+<h2> Final Price: <%= "$#{total}" %></h2>
+<% sale = 0.10  %>
+<% tax = sale * total %>
+<h2> Sales Tax: <%= "#{sale}%"%>  </h2>
+---------------------------------------------------
+<h2> Total On Purchase: <%= "$#{total_price = tax + total}" %></h2>
+
+<br/>
+<br/>
+
 <h1 style="text-align: center; color: red;" > Shipping information </h1>
 
 <%= form_tag checkout_path do %>

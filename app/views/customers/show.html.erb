@@ -29,19 +29,17 @@
 <br/>
 <br/>
 
-<h1 style="text-align: center"> Previous Purchases </h1>
+<h1 style="text-align: center"> Current Cart </h1>
 
-<% purchases = [] %>
+
 <% cart.each do |product|%>
   <% p = Product.find(product) %>
   <div style= "display: inline-grid">
-    <li> <img src= "<% p.style.img_url %>" style="width: 400px;"></li>
-    <li><% purchases << p.style.name %></li>
+    <li> <img src= "<%= p.style.img_url %>" style="width: 400px;"></li>
+    <li><%= p.style.name %></li>
          <% p.size %> 
   </div>
 <% end %>
-
-<%= purchases %>
 
 <br/>
 <br/>

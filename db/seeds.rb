@@ -32,7 +32,18 @@ crocs2 = Style.create(name: "Crocs Red Alligator", img_url: "https://stockx.imgi
 nike2 = Style.create(name: "Nike Air MAGS", img_url: "https://stockx-360.imgix.net/Nike-Air-Mag-Back-To-The-Future-BTTF/Images/Nike-Air-Mag-Back-To-The-Future-BTTF/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1554231796&w=1000")
 nike3 = Style.create(name: "Nike Off-White Presto", img_url: "https://stockx-360.imgix.net/nike-air-presto-off-white_TruView/Images/nike-air-presto-off-white_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000")
 nike4 = Style.create(name: "Jordan 3 Black Cement", img_url: "https://stockx-360.imgix.net/Air-Jordan-3-Retro-Black-Cement-2018/Images/Air-Jordan-3-Retro-Black-Cement-2018/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000")
-jordans3 = Style.create(name: "Jordan 4 White Cement", img_url: "https://stockx-360.imgix.net/Air-Jordan-4-Retro-White-Cement-2016_TruView/Images/Air-Jordan-4-Retro-White-Cement-2016_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1559156457&w=1000")
+jordans3 = Style.create(name: "Addidas NMD", img_url: "https://stockx-360.imgix.net/adidas-nmd-nice-kicks_TruView/Images/adidas-nmd-nice-kicks_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000")
+fear = Style.create(name: "FOG Triple Black", img_url: "https://stockx.imgix.net/Nike-Air-Fear-of-God-1-Triple-Black.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1583268686&w=1000")
+air_max = Style.create(name: "Air Max Duck Camo", img_url: "https://stockx.imgix.net/Nike-Air-Max-90-Reverse-Duck-Camo-2020.png?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1584067533&w=1000")
+nike_dunk = Style.create(name: "Nike Dunk Syracuse", img_url: "https://stockx-360.imgix.net/Nike-Dunk-Low-SP-Syracuse/Images/Nike-Dunk-Low-SP-Syracuse/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1581717601&w=1000")
+concord = Style.create(name: "Jordan 11 Concord", img_url: "https://stockx-360.imgix.net/Air-Jordan-11-Retro-Concord-2018/Images/Air-Jordan-11-Retro-Concord-2018/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1566585772&w=1000")
+trav = Style.create(name: "Travis Scoot Low", img_url: "https://stockx-360.imgix.net/Air-Jordan-1-Retro-Low-Travis-Scott/Images/Air-Jordan-1-Retro-Low-Travis-Scott/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1564689349&w=1000")
+jordans4 = Style.create(name: "Union LA Jordan 1", img_url: "https://stockx-360.imgix.net/Air-Jordan-1-Retro-High-Union-Los-Angeles-Blue-Toe/Images/Air-Jordan-1-Retro-High-Union-Los-Angeles-Blue-Toe/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1544832330&w=1000")
+vans = Style.create(name: "Vans Multi Color", img_url: "https://stockx-360.imgix.net/Vans-Old-Skool-Yacht-Club/Images/Vans-Old-Skool-Yacht-Club/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000")
+yeezy = Style.create(name: "Yeezy Beluga", img_url: "https://stockx-360.imgix.net/Yeezy-Boost-350-Low-V2-Beluga_TruView/Images/Yeezy-Boost-350-Low-V2-Beluga_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000")
+flops = Style.create(name: "Dad Flops", img_url: "https://stockx.imgix.net/Toms-Semana-Flip-Flops-Brown-Leather.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&trim=color&updated_at=1538080256&w=1000")
+addidas = Style.create(name: "Addidas Ultra Boost", img_url: "https://stockx-360.imgix.net/adidas-ultra-boost-triple-black_TruView/Images/adidas-ultra-boost-triple-black_TruView/Lv2/img01.jpg?auto=format,compress&q=90&updated_at=1538080256&w=1000")
+
 
 jordan1 = Product.create(price: 210, size: 12, customer_id: drake.id, style_id: jordans1.id)
 jordan2 = Product.create(price: 220, size: 14, customer_id: chine.id, style_id: jordans2.id)
@@ -44,7 +55,16 @@ nike2 = Product.create(price: 10000, size: 3, customer_id: chris.id, style_id: n
 nike3 = Product.create(price: 1000, size: 10, customer_id: charlie.id, style_id: nike3.id)
 nike4 = Product.create(price: 700, size: 13, customer_id: lindsay.id, style_id: nike4.id)
 jordan3 = Product.create(price: 500, size: 9, customer_id: dawit.id, style_id: jordans3.id)
-
+fear = Product.create(price: 800, size: 10, customer_id: dawit.id, style_id: fear.id)
+air_max = Product.create(price: 200, size: 7, customer_id: chine.id, style_id: air_max.id)
+nike_dunk = Product.create(price: 150, size: 8, customer_id: lindsay.id, style_id: nike_dunk.id)
+condord = Product.create(price: 180, size: 9, customer_id: uzo.id, style_id: concord.id)
+trav = Product.create(price: 400, size: 5, customer_id: drake.id, style_id: trav.id)
+jordans4 = Product.create(price: 350, size: 8, customer_id: beza.id, style_id: jordans4.id)
+vans = Product.create(price: 40, size: 10, customer_id: bret.id, style_id: vans.id)
+yeezy = Product.create(price: 400, size: 10, customer_id: drake.id, style_id: yeezy.id)
+flops = Product.create(price: 1, size: 10, customer_id: dawit.id, style_id: flops.id)
+addidas = Product.create(price: 80, size: 10, customer_id: dawit.id, style_id: addidas.id)
 
 
 

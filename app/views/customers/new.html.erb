@@ -1,7 +1,4 @@
 <div id="cool">
-
-
-    <form class="box" action="new.html" method="post">             
                    
                     <h1>  Sign Up Today! </h1>
 
@@ -9,7 +6,7 @@
 
                     <ul>
                     <%= form_for @customer do |f| %>
-                     </li>
+                     
 
 <%# ====================================================== %>
                         <li>
@@ -28,11 +25,10 @@
                         </li>
 
                         <li>
-                        <%= f.submit "Create Profile" %>
+                        <button id="btn"><%= f.submit "Create Profile" %></button>
                         </li>
                     <% end %>
 
                     </ul>
 <%# =============================================== %>
-    </form>
-</>
+</div>

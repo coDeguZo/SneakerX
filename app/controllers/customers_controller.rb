@@ -32,7 +32,7 @@ class CustomersController < ApplicationController
 
     def process_checkout
         cart.clear
-        flash[:notice] = "Order Completed"
+        flash[:notice] = "Order Completed. Check your email for confirmation!"
         redirect_to current_customer
     end
 

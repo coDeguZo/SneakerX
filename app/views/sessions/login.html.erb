@@ -1,38 +1,37 @@
 
 <div class="login-box">
-<h1> Login </h1>
+    <h1> Login </h1>
 
-<% if flash[:not_logged_in] %>
-    <div class="notice" style="color: red;"><%= flash[:not_logged_in] %></div>
-<% end %>
+            <% if flash[:not_logged_in] %>
+                <div class="notice" style="color: red;"><%= flash[:not_logged_in] %></div>
+            <% end %>
 
-<a class="error">
-    <%= flash["error"] %>
-</a>
+            <a class="error">
+                <%= flash["error"] %>
+            </a>
 
     <div class="textbox">
-<%= form_tag login_path do %>
-    </div>
-
-<div class="textbox">
-    <%= label :name, "Username" %>
-    <%= text_field_tag :name %>
+        <%= form_tag login_path do %>
     </div>
 
     <div class="textbox">
-     <%= label :password, "Password" %>
-     <%= password_field_tag :password %>
-     </div> 
+        <%= label :name, "Username" %>
+        <%= text_field_tag :name %>
+    </div>
 
-     <div class="textbox">
-     <%= label :password_confirmation, "Password Confirmation" %>
-     <%= password_field_tag :password_confirmation %>
-     </div> 
+    <div class="textbox">
+        <%= label :password, "Password" %>
+        <%= password_field_tag :password %>
+    </div> 
+
+    <div class="textbox">
+        <%= label :password_confirmation, "Password Confirmation" %>
+        <%= password_field_tag :password_confirmation %>
+    </div> 
 
 
     <div class="textbox">
-    <%= submit_tag "Login" %>
+        <%= submit_tag "Login" %>
     </div>
-<% end %>
+        <% end %>
 </div>
-</section>
