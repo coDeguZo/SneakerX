@@ -1,23 +1,21 @@
 # SneakerX Online Shop
 
+Ruby version => '2.6.1'
+
 ## Summary
 
-This is a sports news aggregator designed to get all of your daily news in the sports world, as well as in the NBA. A user can either sign-up or sign-in and follow NBA teams or players, and read up on their favorite sports teams. If you dont want to follow a player, no problem! You can unfollow a player or team and continue using the app. If there is a spcific news article you like go ahead and bookmark it, and read it later on your profile page! I hope you enjoy using my app and continue following some of the best sports news in the world!
-
-(Due to changes to the News API CORS restrictions, news will need to be updated by seeding the backend postgreSQL database)
+This is a online sneaker store that allows user to create accounts that enable them to buy some of the hottest shoes out there!
 
 Instructions
-Clone down the SPN Frontend Repo.
+Clone down the SneakerX repository.
 
-Run npm install
+Run bundle install
 
-Run npm start
+Run rails server (rails s)
 
-Open http://localhost:3000
+Open http://localhost:3000/products
 
-(Optionally check ou the website at https://sportsnewsnetwork.netlify.app/)
-
-Reducer Tests
+<!-- Reducer Tests
 Run Home and App tests by running npm test.
 
 If you do not have enzyme test suite installed run: npm i --save-dev enzyme enzyme-adapter-react-16
@@ -32,4 +30,4 @@ Backend deployed on Heroku: https://spn-backend.herokuapp.com/
 
 Youtube Video: https://www.youtube.com/watch?v=utf_OsfIUdo
 
-Netlify Deployed Website: https://sportsnewsnetwork.netlify.app/
+Netlify Deployed Website: https://sportsnewsnetwork.netlify.app/ -->
