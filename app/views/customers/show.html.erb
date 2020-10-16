@@ -1,4 +1,4 @@
-<h1 style="text-align: center"> Profile Page </h1>
+<h1 style="text-align: center; color: red;"> Profile Page </h1>
 <br/>
 <br/>
 
@@ -10,9 +10,16 @@
 <h3> Name: <a class = "name"> <%= @customer.name %> </a></h3>
 <h3>Address: <a class = "address"> <%= @customer.address %> </a></h3>
 
+<br />
+<br />
+
+<div>
+<%= link_to "Change Customer Information", edit_customer_path %>
+</div>
+
 <br/>
 
-<h1 style="text-align: center">Inventory of Shoes</h1>
+<h1 style="text-align: center; color: red">Inventory of Shoes</h1>
 
 <ul>
 <% @customer.products.each do |product| %>
@@ -25,11 +32,18 @@
 <% end %>
 </ul>
 
+<br />
+<br />
+
+<div>
+<%= link_to "Add Shoes To Sell", new_product_path %>
+</div>
+
 
 <br/>
 <br/>
 
-<h1 style="text-align: center"> Current Cart </h1>
+<h1 style="text-align: center; color: red;"> Current Cart </h1>
 
 
 <% cart.each do |product|%>
@@ -43,11 +57,3 @@
 
 <br/>
 <br/>
-
-<div>
-<%= link_to "Add Shoes To Sell", new_product_path %>
-</div>
-
-<div>
-<%= link_to "Change Customer Information", edit_customer_path %>
-</div>
